@@ -1,5 +1,7 @@
 # Reproducibility code
 
+This anonymized repository contains the code needed to reproduce the results in our AISTATS 2027 submission, *Learned Quantile Derivatives for Conformal Prediction Sets*.
+
 ## Installation
 
 The required Python environment, matching the environment used for the checkpoint-equivalence test, is:
