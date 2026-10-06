@@ -1,0 +1,8 @@
+name: lqds-reproducibility
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.12
+  - pip=21.2.4
+  - pip:
+      - -r requirements.txt

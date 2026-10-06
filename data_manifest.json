@@ -1,0 +1,13 @@
+{
+  "CASP.csv": "4277cfcb4e91a181746cbc654f001b57951c9e6a80f4f795fdb5c807e0848f40",
+  "STAR.csv": "0c5dbe6e9a6d9875da4a88d588eca36068eccb77343b327d0c69cf2d8adb44eb",
+  "bike_train.csv": "0cf70c35eeb6405a40cc9e124854e2da901fa88fe7374a75d141e7401bf4c857",
+  "communities.data": "09e0b5c07eae24c1efab19b2edee05e160e7f5743b6f31e31eec3d73624da2ea",
+  "communities_attributes.csv": "7910375e27b6544045bd620efe7724afd9c90f53e711c78df7c16c3adfddcc9b",
+  "blogData_train.csv": "f3cc953ea9913361be6d3bae2c393eef73eab57b1cb8e5bf8a22f1e5eb5dd05f",
+  "facebook/Features_Variant_1.csv": "f8a739d1d95318694a7827fe5cc07d7ff5478ef9200a529f7625f8a45838a611",
+  "facebook/Features_Variant_2.csv": "f202a8462a941c19cde8523cc7bcfb01cade7729e746484cc8f642489b9f9355",
+  "meps_19_reg.csv": "c1f959b6e77f0265d0bf48bcd97127749b0151a756f86d441c902a856f44adf0",
+  "meps_20_reg.csv": "a5054e3cf83703c9933cdb2658c2a64ccea508a820d62bb4a08c5fdf73e4eb5c",
+  "meps_21_reg.csv": "ef9f73bec1a3ee51dadd6403929ab09f9fc230f9d6d82e4373aec04bb5a569a1"
+}
