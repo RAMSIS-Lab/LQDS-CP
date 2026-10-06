@@ -144,10 +144,4 @@ python scripts/make_width_boxplots.py
 
 The vector PDFs use the AISTATS text width (6.75 inches) and Computer Modern through LaTeX. A working LaTeX installation is therefore required for this final plotting step.
 
-## Reproducibility details
 
-- Seeds, data splits, architectures, optimization, early stopping, calibration, and metrics match the manuscript.
-- A model family is fitted once per dataset split and shared by every method that uses it.
-- Checkpoint mode is only a convenience for locally generated files; no checkpoint is distributed.
-- `scripts/download_data.py` rejects any data file whose SHA-256 digest differs from the exact benchmark input.
-- A complete paper run is computationally expensive. Use one dataset and seed first to validate the environment.
