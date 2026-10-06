@@ -1,9 +1,5 @@
 # Reproducibility code
 
-This repository reproduces the real-data benchmark reported in the manuscript. It contains clean implementations of LQDS and every reported baseline, but it contains no datasets, checkpoints, or saved result files. Those items are downloaded or generated locally.
-
-The benchmark follows the data layout of the public [Conformalized Quantile Regression (CQR) repository](https://github.com/yromano/cqr). It uses ten datasets, thirteen procedures, thirty splits (seeds 2000--2029), and the training protocol stated in the paper. Concrete and Temperature are not used.
-
 ## Installation
 
 The required Python environment, matching the environment used for the checkpoint-equivalence test, is:
@@ -144,4 +140,26 @@ python scripts/make_width_boxplots.py
 
 The vector PDFs use the AISTATS text width (6.75 inches) and Computer Modern through LaTeX. A working LaTeX installation is therefore required for this final plotting step.
 
+## Synthetic experiments
 
+Run the complete synthetic study reported in the manuscript:
+
+```bash
+python scripts/run_all_synthetic.py
+```
+
+This command runs the exact-distribution Stage-2 comparison over 30 seeds, fits all four model families over ten splits for the learned Stage-1 comparison, and runs the convergence and conditional-coverage experiments over five splits per configuration. Generated models and results are written under `artifacts/synthetic/`.
+
+The components can also be run separately:
+
+```bash
+python scripts/run_synthetic.py oracle --seeds 30 --Ks 20,30,50,99 --n 2000 --interp flin
+python scripts/run_synthetic.py e2e --seeds 10 --seed-start 2000 --n-eval 1000 --interp flin --threads 1
+python scripts/run_synthetic_convergence.py 12000 30 0
+```
+
+After all components finish, generate the manuscript-width synthetic figure:
+
+```bash
+python scripts/make_synthetic_figure.py
+```

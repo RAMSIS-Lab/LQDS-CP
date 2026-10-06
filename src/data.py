@@ -62,7 +62,12 @@ def load_dataset(
     name = ALIASES.get(name.lower(), name.lower())
     root = Path(data_dir)
 
-    if name.startswith("meps"):
+    if name == "synth_hard":
+        from .synthetic import make_dataset
+
+        values, y = make_dataset()
+        X = pd.DataFrame(values, columns=[f"x{i + 1}" for i in range(values.shape[1])])
+    elif name.startswith("meps"):
         year = name[-2:]
         df = pd.read_csv(root / f"meps_{year}_reg.csv")
         y = df.pop("UTILIZATION_reg").to_numpy()
@@ -169,6 +174,7 @@ def make_splits(
         "meps19": "UTILIZATION_reg",
         "meps20": "UTILIZATION_reg",
         "meps21": "UTILIZATION_reg",
+        "synth_hard": "y",
     }
     return SplitData(
         tx(X_train),
